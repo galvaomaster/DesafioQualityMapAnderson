@@ -9,8 +9,8 @@ import { faker } from '@faker-js/faker';
 
 // }
 
-//  userFirstName = faker.randomFirtName();
-//  userLastName = faker.randomLastName();
+ userFirstName = faker.randomFirtName();
+ userLastName = faker.randomLastName();
 
 
 const randomFirtName = faker.person.firstName();
@@ -24,8 +24,8 @@ const companyName = 'Quality Map - Anderson Galvão'
 const pass = '123456'
 
 
-//const randomLastName = faker.person.lastName();
-//const randomLastName = faker.person.lastName();
+const randomLastName = faker.person.lastName();
+const randomLastName = faker.person.lastName();
 
 
 describe('Acesso a página', () => {
@@ -71,8 +71,8 @@ describe('Acesso a página', () => {
       .type(pass)
     cy.get('#register-button')
       .click()
-    // cy.get('.result')
-    // .should('have.value', 'Your registration completed')
+    cy.get('.result')
+     .should('have.value', 'Your registration completed')
 
 
     //xpath('a[contains(text(),"Register")]')

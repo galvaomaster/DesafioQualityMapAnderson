@@ -34,6 +34,9 @@ Deve retornar v1.22.19
 npm add @faker-js/faker --dev
 
 
+cucumber pre processor
+npm install --save-dev cypress-cucumber-preprocessor
+
 ### Git
 
 Acessar o link [https://git-scm.com/downloads](https://git-scm.com/downloads), baixar e instalar o Git/GitBash;
