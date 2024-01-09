@@ -1,4 +1,4 @@
-import { radomEmail, randomDateOfBirthDay, randomDateOfBirthMonth, randomDateOfBirthYear, randomFirtName, randomLastName, randomPass } from "../../data/data";
+import { radomEmail, randomDateOfBirthDay, randomDateOfBirthMonth, randomDateOfBirthYear, randomFirtName, randomLastName, randomPass, randonConfirmPassword , randonCompanyName} from "../../data/data";
 
 
 
@@ -13,6 +13,13 @@ const companyName = '#Company'
 const password = '#Password'
 const confirmPassword = '#ConfirmPassword'
 const registerButton = '#register-button'
+const firstNameErrorMessage = '#FirstName-error'
+const lastNameErrorMessage = '#LastName-error'
+const emailErrorMessage = '#Email-error'
+const passwordErrorMessage = '#Password-error'
+
+
+
 
 
 
@@ -39,39 +46,51 @@ class RegisterPage {
             .type(randomLastName)
     }
     static dateOfBirthDay() {
-        cy.get('[name="DateOfBirthDay"]')
+        cy.get(dateOfBirthDay)
             .select(randomDateOfBirthDay)
             //.click()
             //.type(randomDateOfBirthDay)
     }
     static dateOfBirthMonth() {
-        cy.get('[name="DateOfBirthMonth"]')
+        cy.get(dateOfBirthMonth)
             .select(randomDateOfBirthMonth)
            // .type(randomDateOfBirthMonth)
     }
     static dateOfBirthYear() {
-        cy.get('[name="DateOfBirthYear"]')
+        cy.get(dateOfBirthYear)
             .select(randomDateOfBirthYear)
     }
     static email() {
-        cy.get('#Email')
+        cy.get(email)
             .type(radomEmail)
     }
     static companyName() {
-        cy.get('#Company')
-            .type(companyName)
+        cy.get(companyName)
+            .type(randonCompanyName)
     }
     static password() {
-        cy.get('#Password')
+        cy.get(password)
             .type(randomPass)
     }
     static ConfirmPassword() {
-        cy.get('#ConfirmPassword')
-            .type(confirmPassword)
+        cy.get(confirmPassword)
+            .type(randonConfirmPassword)
     }
     static registerButton() {
-        cy.get('#register-button')
+        cy.get(registerButton)
             .click()
+    }
+    static checkFirstNameErrorMessage (){
+        cy.get(firstNameErrorMessage).should('contain.text', 'First name is required.')
+    }
+    static checkLastNameErrorMessage (){
+        cy.get(lastNameErrorMessage).should('contain.text', 'Last name is required.')
+    }
+    static checkEmailErrorMessage (){
+        cy.get(emailErrorMessage).should('contain.text', 'Email is required.')
+    }
+    static checkPasswordErrorMessage (){
+        cy.get(passwordErrorMessage).should('contain.text', 'Password is required.')
     }
 
 

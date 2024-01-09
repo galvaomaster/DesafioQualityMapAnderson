@@ -10,10 +10,9 @@ Feature: Login
 
 
 
-# @focus
 # Scenario: Invalid Login
 
-#     When i type a  "<email>"
+#     When i type a "<email>"
 #     And type a "<password>"
 #     Then i have an error "<message>"
 

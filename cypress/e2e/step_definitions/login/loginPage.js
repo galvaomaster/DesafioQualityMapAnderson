@@ -1,10 +1,4 @@
-//import { faker } from '@faker-js/faker';
 import { loginEmail, radomEmail, randomPass } from "../../data/data";
-// const radomEmail =  faker.internet.email()
-// const randomPass = faker.internet.password()
-const EMAIL_INPUT = '#Email'
-const PASSWORD_INPUT = '#Password'
-const SUBMIT_BUTTON = '.login-button'
 
 
 
@@ -25,7 +19,7 @@ class LoginPage {
         cy.get(SUBMIT_BUTTON)
             .click()
     }
-    static successLogin(){
+    static successLogin() {
 
     }
 
