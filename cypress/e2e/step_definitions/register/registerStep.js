@@ -1,11 +1,11 @@
 /// <reference types="Cypress"/>
 
-import { companyName, confirmPassword, radomEmail, randomDateOfBirthDay, randomDateOfBirthMonth, randomDateOfBirthYear, randomFirtName, randomLastName, randomPass, randonCompanyName, randonConfirmPassword } from '../../data/data';
+import { companyName, confirmPassword, radomEmail, randomDateOfBirthDay, randomDateOfBirthMonth, randomDateOfBirthYear, randomFirtName, randomLastName, randomPass, randonCompanyName, randonConfirmPassword ,site} from '../../data/dataFrontEnd';
 import RegisterPage from './registerPage'
 
 
 Given(/^that i am on the registration page$/, () => {
-  RegisterPage.visitPageRegister('/')
+  RegisterPage.visitPageRegister()
   //  cy.visit('https://demo.nopcommerce.com/')
   //  cy.contains('a', 'Register')
   //    .click()

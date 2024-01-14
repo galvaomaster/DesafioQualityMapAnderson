@@ -1,4 +1,4 @@
-import { radomEmail, randomDateOfBirthDay, randomDateOfBirthMonth, randomDateOfBirthYear, randomFirtName, randomLastName, randomPass, randonConfirmPassword , randonCompanyName} from "../../data/data";
+import { site, radomEmail, randomDateOfBirthDay, randomDateOfBirthMonth, randomDateOfBirthYear, randomFirtName, randomLastName, randomPass, randonConfirmPassword , randonCompanyName} from "../../data/dataFrontEnd";
 
 
 
@@ -26,7 +26,7 @@ const passwordErrorMessage = '#Password-error'
 
 class RegisterPage {
     static visitPageRegister() {
-        cy.visit('/')
+        cy.visit(site)
         cy.contains('a', 'Register')
             .click()
 
@@ -66,7 +66,7 @@ class RegisterPage {
     }
     static companyName() {
         cy.get(companyName)
-            .type(randonCompanyName)
+            .type(companyName)
     }
     static password() {
         cy.get(password)
